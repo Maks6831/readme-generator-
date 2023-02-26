@@ -8,10 +8,10 @@ import inquirer from 'inquirer';
 //import generateMarkdown from '../utils/generateMarkdown';
 
 const licenses = {
-    'MIT': '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]',
-    'GPLv2': '[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)]',
-    "Apache": '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]',
-    'BSD 3-clause': '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]'
+    'MIT': '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)',
+    'GPLv2': '![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)',
+    "Apache": '![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)',
+    'BSD 3-clause': '![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)'
 }
 
 // array of questions for user
@@ -45,12 +45,15 @@ ${findBadge(data[4], licenses)}
 ## Description
 ${data[1]}
 ## Table of Contents
-1. [Installation](#installation)
-2. [Usage](#usage)
-3. [License](#license)
-4. [Contributing](#contributing)
-5. [Tests](#tests)
-6. [Questions](#questions)
+
+1.  [Documentation](#documentation)
+    1. [Installation](#installation)
+    2. [Usage](#usage)
+    3. [License](#license)
+    4. [Contributing](#contributing)
+    5. [Tests](#tests)
+    6. [Questions](#questions)
+
 ## Installation
 ${data[2]}
 ## Usage 
