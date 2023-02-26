@@ -41,31 +41,30 @@ const findBadge = (a, b) => {
 const writeToFile = (data) => {
     fs.writeFile('README.md',
     `# ${data[0]}
-    ${findBadge(data[4], licenses)}
-    ## Description
-    ${data[1]}
-    ## Table of Contents
-    1. [Installation](#installation)
-    2. [Usage](#usage)
-    3. [License](#license)
-    4. [Contributing](#contributing)
-    5. [Tests](#tests)
-    6. [Questions](#questions)
-    ## Installation
-    ${data[2]}
-    ## Usage 
-    ${data[3]}
-    ## License
-    ${data[4]}
-    ## Contributing 
-    ${data[5]}
-    ## Tests
-    ${data[6]}
-    ## Questions 
-
-    If you have any queries please feel free to contact me : ${data[8]}
-    Github: <a href="github.com/${data[7]}">click here</a>
-    `
+${findBadge(data[4], licenses)}
+## Description
+${data[1]}
+## Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [License](#license)
+4. [Contributing](#contributing)
+5. [Tests](#tests)
+6. [Questions](#questions)
+## Installation
+${data[2]}
+## Usage 
+${data[3]}
+## License
+${data[4]}
+## Contributing 
+${data[5]}
+## Tests
+${data[6]}
+## Questions 
+If you have any queries please feel free to contact me : ${data[8]}
+Github: <a href="github.com/${data[7]}">click here</a>
+`
     ,(err) => err? console.log(err): console.log('success'));
 }
 
