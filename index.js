@@ -24,7 +24,8 @@ const questions = [
     'Please provide any contributions',
     'Describe any testing procedures',
     'Please provide your github username',
-    'Please provide your email address'
+    'Please provide your email address',
+    'Please enter your name'
 ];
 
 const findBadge = (a, b) => {
@@ -40,25 +41,24 @@ const findBadge = (a, b) => {
 
 const writeToFile = (data) => {
     fs.writeFile('README.md',
-    `# ${data[0]}
+    `# ${data[0]} <!-- omit in toc -->
 ${findBadge(data[4], licenses)}
-## Description
 ${data[1]}
-## Table of Contents
+## Table of Contents <!-- omit in toc -->
 
-1.  [Documentation](#documentation)
-    1. [Installation](#installation)
-    2. [Usage](#usage)
-    3. [License](#license)
-    4. [Contributing](#contributing)
-    5. [Tests](#tests)
-    6. [Questions](#questions)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
 ${data[2]}
 ## Usage 
 ${data[3]}
 ## License
+Copyright &copy ${new Date().getFullYear()} ${data[9]}. Licensed under the ${data[4]} license;
 ${data[4]}
 ## Contributing 
 ${data[5]}
