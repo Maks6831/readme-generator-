@@ -7,6 +7,13 @@ import inquirer from 'inquirer';
 //const generateMarkdown = require("./utils/generateMarkdown");
 //import generateMarkdown from '../utils/generateMarkdown';
 
+const licenses = {
+    'MIT': '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]',
+    'GPLv2': '[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)]',
+    "Apache": '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]',
+    'BSD 3-clause': '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]'
+}
+
 // array of questions for user
 const questions = [
     'what is the title of your project?',
@@ -20,10 +27,21 @@ const questions = [
     'Please provide your email address'
 ];
 
+const findBadge = (a, b) => {
+    let badge = '';
+    for (const key in b){
+        if(key == a){
+            badge = b[key];
+            return badge;
+            console.log(badge);
+        }
+    }
+}
 
 const writeToFile = (data) => {
     fs.writeFile('README.md',
     `# ${data[0]}
+    ${findBadge(data[4], licenses)}
     ## Description
     ${data[1]}
     ## Table of Contents
@@ -46,7 +64,7 @@ const writeToFile = (data) => {
     ## Questions 
 
     If you have any queries please feel free to contact me : ${data[8]}
-    Github: ${data[7]}
+    Github: <a href="github.com/${data[7]}">click here</a>
     `
     ,(err) => err? console.log(err): console.log('success'));
 }
@@ -55,6 +73,7 @@ const writeToFile = (data) => {
 const execInquirer = (inquirerArr) => {
     inquirer.prompt(inquirerArr).then((data) => {
         console.log(data);
+        findBadge(data)
         writeToFile(data);
     });
 }
@@ -94,3 +113,4 @@ function init() {
 
 // function call to initialize program
 init();
+
