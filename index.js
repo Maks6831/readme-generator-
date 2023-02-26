@@ -42,7 +42,7 @@ const findBadge = (a, b) => {
 const writeToFile = (data) => {
     fs.writeFile('README.md',
     `# ${data[0]} <!-- omit in toc -->
-${findBadge(data[4], licenses)}
+${findBadge(data[4], licenses)} <br>
 ${data[1]}
 ## Table of Contents <!-- omit in toc -->
 
@@ -66,7 +66,7 @@ ${data[5]}
 ${data[6]}
 ## Questions 
 If you have any queries please feel free to contact me : ${data[8]}
-Github: <a href="github.com/${data[7]}">click here</a>
+Github: <a href="https://github.com/${data[7]}">click here</a>
 `
     ,(err) => err? console.log(err): console.log('success'));
 }

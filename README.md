@@ -1,5 +1,5 @@
 # Hello <!-- omit in toc -->
-![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)
+![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg) <br>
 Hello
 ## Table of Contents <!-- omit in toc -->
 
@@ -22,5 +22,5 @@ Hello
 ## Tests
 Hello
 ## Questions 
-If you have any queries please feel free to contact me : hello
-Github: <a href="github.com/Maks6831">click here</a>
+If you have any queries please feel free to contact me : Hello
+Github: <a href="https://github.com/Maks6831">click here</a>
