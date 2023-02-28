@@ -77,7 +77,7 @@ ${data[5]}
 ## Tests
 ${data[6]}
 ## Questions 
-If you have any queries please feel free to contact me : ${data[8]}
+If you have any queries please feel free to contact me : ${data[8]} <br>
 Github: <a href="https://github.com/${data[7]}">click here</a>
 `
     ,(err) => err? console.log(err): console.log('success'));
