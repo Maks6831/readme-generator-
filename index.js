@@ -113,7 +113,6 @@ const inquirerPrompts = (questions) => {
             inquirerArr.push(inquireQ);
         }
         }     
-console.log(inquirerArr);
 execInquirer(inquirerArr);
 }
 
