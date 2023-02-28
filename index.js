@@ -1,3 +1,7 @@
+
+//------------------------------------------------------------- imports -------------------------------------------------------------//
+
+
 //const fs = require("fs");
 import fs from 'fs';
 //const path = require('path');
@@ -7,6 +11,10 @@ import inquirer from 'inquirer';
 //const generateMarkdown = require("./utils/generateMarkdown");
 //import generateMarkdown from '../utils/generateMarkdown';
 
+//------------------------------------------------------------- Global Variables -------------------------------------------------------------//
+
+
+// object containing all of the license badges
 const licenses = {
     'MIT': '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)',
     'GPLv2': '![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)',
@@ -28,6 +36,9 @@ const questions = [
     'Please enter your name'
 ];
 
+//------------------------------------------------------------- Creating the README -------------------------------------------------------------//
+
+// takes in a - which is the key chosen and b - license object - loops to find badge string.
 const findBadge = (a, b) => {
     let badge = '';
     for (const key in b){
@@ -39,6 +50,7 @@ const findBadge = (a, b) => {
     }
 }
 
+// takes data from prompts and creates README
 const writeToFile = (data) => {
     fs.writeFile('README.md',
     `# ${data[0]} <!-- omit in toc -->
@@ -71,17 +83,19 @@ Github: <a href="https://github.com/${data[7]}">click here</a>
     ,(err) => err? console.log(err): console.log('success'));
 }
 
-// creates question objects to parse to inquire prompt
+//------------------------------------------------------------- inquirer prompts -------------------------------------------------------------//
+
+// parses questions object to inquirer.prompt
 const execInquirer = (inquirerArr) => {
     inquirer.prompt(inquirerArr).then((data) => {
-        console.log(data);
-        findBadge(data)
         writeToFile(data);
     });
 }
 
+// creates question objects to parse to inquire prompt
 const inquirerPrompts = (questions) => {
     let inquirerArr = [];
+    // turns the license question into a list.
     for(let i =0; i < questions.length; i++){
         if(questions[i].includes('license')){
             let inquireQ = {
@@ -102,11 +116,6 @@ const inquirerPrompts = (questions) => {
 console.log(inquirerArr);
 execInquirer(inquirerArr);
 }
-
-
-// function to write README file
-//function writeToFile(fileName, data) {
-//}
 
 // function to initialize program
 function init() {
