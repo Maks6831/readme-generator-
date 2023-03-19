@@ -2,8 +2,7 @@
   "name": "readme-generator-",
   "version": "1.0.0",
   "description": "generates Markdown files using NodeJS",
-  "main": "index.js",
-  "type": "module",
+  "main": "index.js",  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +19,7 @@
   "homepage": "https://github.com/Maks6831/readme-generator-#readme",
   "dependencies": {
     "fs": "^0.0.1-security",
-    "inquirer": "^9.1.4"
+    "inquirer": "^8.2.5",
+    "path": "^0.12.7"
   }
 }

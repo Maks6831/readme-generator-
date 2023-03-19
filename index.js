@@ -3,17 +3,22 @@
 
 
 //const fs = require("fs");
-import fs from 'fs';
-//const path = require('path');
-import path from 'path';
-//const inquirer = require("inquirer");
-import inquirer from 'inquirer';
+//import fs from 'fs';
+////const path = require('path');
+//import path from 'path';
+////const inquirer = require("inquirer");
+//import inquirer from 'inquirer';
+const fs = require('fs');
+const path = require("path");
+const inquirer = require("inquirer")
+
 //const generateMarkdown = require("./utils/generateMarkdown");
 //import generateMarkdown from '../utils/generateMarkdown';
 
 //------------------------------------------------------------- Global Variables -------------------------------------------------------------//
 
-
+const OUTPUT_DIR = path.resolve(__dirname, "output");
+const outputPath = path.join(OUTPUT_DIR, "README.md");
 // object containing all of the license badges
 const licenses = {
     'MIT': '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)',
@@ -52,7 +57,7 @@ const findBadge = (a, b) => {
 
 // takes data from prompts and creates README
 const writeToFile = (data) => {
-    fs.writeFile('README.md',
+    fs.writeFile(outputPath,
     `# ${data[0]} <!-- omit in toc -->
 ${findBadge(data[4], licenses)} <br>
 ${data[1]}
