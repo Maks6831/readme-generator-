@@ -16,6 +16,7 @@ Simply download the files, make sure to run npm so that node_modules are availab
 Simply enter the relevant information when prompted as shown below.
 ![Screenshot 2023-02-28 at 22 36 14](https://user-images.githubusercontent.com/118021969/221997609-4dce28c9-63c5-44ed-b5f3-7b0203e31551.png)
 A README.md file will be created. One can always add more information to the file manually after the file has been created.
+Video Demonstration: <a href="https://drive.google.com/file/d/1Alq0nAIqPnLVctfB_I5mt52erfHpcE_a/view">Click here</a>
 ## License
 Copyright &copy 2023 Muhammad Ali Khan. Licensed under the MIT license;
 MIT
